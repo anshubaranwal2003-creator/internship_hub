@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Login</title>
+    <style>
+        /* CSS for styling */
+        body {
+            background-color: cyan; /* Cyan background */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: pink;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(21, 182, 251, 0.9);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: blue;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid pink;
+        }
+
+        button {
+            background-color:rgb(11, 145, 217);
+            color: pink;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background-color:rgb(86, 139, 200);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Student Login</h2>
+        <form method="POST" id="loginForm">
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Collect form data
+            const formData = new FormData(this);
+
+            // Example: console log the form data (you can send this data to the server)
+            console.log("Form Submitted:");
+            formData.forEach((value, key) => {
+                console.log(key + ": " + value);
+            });
+
+            // Optional: show alert or perform any other action
+            alert("Login form submitted!");
+        });
+    </script>
+
+</body>
+</html>
