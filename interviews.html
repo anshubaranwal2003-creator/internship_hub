@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interview Tracker</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color:rgb(7, 214, 233);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: blue;
+            color: pink;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form, .interview-list {
+            max-width: 700px;
+            margin: 20px auto;
+            background: pink;
+            padding: 20px;
+            box-shadow: 0 0 10px cyan;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: cyan;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interview Tracker</h1>
+    </header>
+
+    <form method="POST" action="/">
+        <h2>Schedule Interview</h2>
+        <input type="number" name="application_id" placeholder="Application ID" required>
+        <input type="date" name="interview_date" required>
+        <select name="mode" required>
+            <option value="">Select Mode</option>
+            <option value="Online">Online</option>
+            <option value="Offline">Offline</option>
+        </select>
+        <select name="result">
+            <option value="Pending" selected>Pending</option>
+            <option value="Selected">Selected</option>
+            <option value="Rejected">Rejected</option>
+        </select>
+        <button type="submit">Save Interview</button>
+    </form>
+
+    <div class="interview-list">
+        <h2>Scheduled Interviews</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interview ID</th>
+                    <th>Application ID</th>
+                    <th>Date</th>
+                    <th>Mode</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>6</td>
+                    <td>1006</td>
+                    <td>2025-04-17</td>
+                    <td>Online</td>
+                    <td>Rejected</td>
+                </tr>
+                
+                <tr>
+                    <td>5</td>
+                    <td>1005</td>
+                    <td>2025-05-01</td>
+                    <td>Online</td>
+                    <td>Selected</td>
+                </tr>
+                
+                <tr>
+                    <td>4</td>
+                    <td>1004</td>
+                    <td>2025-04-28</td>
+                    <td>Offline</td>
+                    <td>Pending</td>
+                </tr>
+                
+                <tr>
+                    <td>3</td>
+                    <td>1003</td>
+                    <td>2025-04-27</td>
+                    <td>Online</td>
+                    <td>Rejected</td>
+                </tr>
+                
+                <tr>
+                    <td>2</td>
+                    <td>1002</td>
+                    <td>2025-04-26</td>
+                    <td>Offline</td>
+                    <td>Selected</td>
+                </tr>
+                
+                <tr>
+                    <td>1</td>
+                    <td>1001</td>
+                    <td>2025-04-25</td>
+                    <td>Online</td>
+                    <td>Pending</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        &copy; 2025 InterviewHub. All rights reserved.
+    </footer>
+
+    <script>
+        console.log("Interview page loaded!");
+    </script>
+</body>
+</html>

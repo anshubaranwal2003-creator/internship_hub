@@ -1,0 +1,111 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Status</title>
+    <style>
+        /* CSS - Basic styling for the application status page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(4, 224, 228);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color:rgb(213, 14, 127);
+            color: white;
+            padding: 20px;
+        }
+
+        table {
+            margin: 20px auto;
+            width: 80%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(194, 13, 203, 0.94);
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color:rgb(16, 89, 234);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color:rgb(253, 248, 255);
+        }
+
+        tr:hover {
+            background-color:rgb(253, 249, 254);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 90%;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Application Status</h1>
+
+    <table>
+        <tr>
+            <th>Application ID</th>
+            <th>Internship ID</th>
+            <th>Date Applied</th>
+            <th>Status</th>
+        </tr>
+
+        <!-- Application data will be injected here from Flask -->
+        
+        <tr>
+            <td>1</td>  <!-- Application ID -->
+            <td>1</td>  <!-- Internship ID -->
+            <td>2025-04-01</td>  <!-- Date Applied -->
+            <td>Pending</td>  <!-- Status -->
+        </tr>
+        
+        <tr>
+            <td>3</td>  <!-- Application ID -->
+            <td>1</td>  <!-- Internship ID -->
+            <td>2025-04-25</td>  <!-- Date Applied -->
+            <td>Pending</td>  <!-- Status -->
+        </tr>
+        
+        <tr>
+            <td>4</td>  <!-- Application ID -->
+            <td>1</td>  <!-- Internship ID -->
+            <td>2025-04-10</td>  <!-- Date Applied -->
+            <td>Pending</td>  <!-- Status -->
+        </tr>
+        
+    </table>
+
+    <script>
+        // Example JavaScript for potential dynamic behavior (optional)
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusCells = document.querySelectorAll('td:nth
+
+        </body>
+        </html>

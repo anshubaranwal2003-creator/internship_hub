@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* CSS - Styles for the page */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(243, 207, 2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(16, 209, 129, 0.96);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            color:balck;
+            font-size: 2em;
+        }
+
+        .logout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color:rgb(32, 87, 240);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>This is your dashboard.</p>
+
+    </div>
+
+    <!-- JavaScript - Confirm logout action -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoutButton = document.querySelector('.logout-btn');
+
+            logoutButton.addEventListener('click', function (event) {
+                if (!confirm('Are you sure you want to log out?')) {
+                    event.preventDefault();  // Prevent logout if user cancels
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

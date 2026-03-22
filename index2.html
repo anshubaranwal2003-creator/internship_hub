@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Portal Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container a {
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        // Example JS to confirm navigation action (Optional)
+        function confirmNavigation(message) {
+            return confirm(message);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Internship Portal</h1>
+        <div class="button-container">
+            <a href="/add" onclick="return confirmNavigation('Are you sure you want to add a new employer?')">➕ Add New Employer</a>
+            <a href="/" onclick="return confirmNavigation('Do you want to view the list of employers?')">📋 View Employers</a>
+        </div>
+    </div>
+
+</body>
+</html>

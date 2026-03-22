@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Hub</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(11, 199, 246);
+            color: pink;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding-top: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin: 15px;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color:rgb(194, 17, 233);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color:rgb(245, 0, 253);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Internship Hub</h1>
+        <h2>Choose a University:</h2>
+
+        <!-- University List -->
+        <ul id="university-list">
+            <!-- Universities will be populated by JavaScript -->
+        </ul>
+
+        <!-- Error Message -->
+        <div class="error" id="error-message" style="display: none;">
+            Unable to load the universities. Please try again later.
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling dynamic data and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate fetching data from the server
+            const universities = [
+                { id: 1, name: 'University A', location: 'City A' },
+                { id: 2, name: 'University B', location: 'City B' },
+                { id: 3, name: 'University C', location: 'City C' }
+            ];
+
+            // Reference to the HTML list where universities will be displayed
+            const universityList = document.getElementById('university-list');
+            const errorMessage = document.getElementById('error-message');
+
+            if (universities.length > 0) {
+                // Populate the list of universities
+                universities.forEach(university => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="/internships/${university.id}">${university.name} - ${university.location}</a>`;
+                    universityList.appendChild(listItem);
+                });
+            } else {
+                // Show error message if no universities are available
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
+
+</body>
+</html>

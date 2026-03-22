@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Dashboard</title>
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color:rgb(235, 11, 228);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color:rgb(14, 236, 217);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(20, 12, 232, 0.93);
+        }
+
+        h1 {
+            color: #4CAF50;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            background-color:rgb(12, 245, 214);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+            padding: 12px 15px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color:rgb(17, 214, 162);
+        }
+
+        tr:hover {
+            background-color:rgb(7, 218, 112);
+        }
+
+        .no-record {
+            color: #888;
+            font-style: italic;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Dashboard</h1>
+        <div class="table-container">
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Amount (INR)</th>
+                        <th>Status</th>
+                        <th>Payment Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td>1</td>
+                            <td>user1@example.com</td>
+                            <td>2.0</td> <!-- Convert to INR -->
+                            <td>Pending</td>
+                            <td>2025-04-25 12:20:02</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>2</td>
+                            <td>user2@example.com</td>
+                            <td>1.5</td> <!-- Convert to INR -->
+                            <td>Completed</td>
+                            <td>2025-04-25 12:20:02</td>
+                        </tr>
+                    
+                        <tr>
+                            <td>3</td>
+                            <td>user3@example.com</td>
+                            <td>3.0</td> <!-- Convert to INR -->
+                            <td>Failed</td>
+                            <td>2025-04-25 12:20:02</td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employer List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(237, 19, 110);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            background-color:hsla(187, 89.90%, 46.50%, 0.94);
+            padding: 8px 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color:rgb(238, 166, 10);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color:rgba(224, 12, 157, 0.84);
+        }
+
+        .link-btn {
+            color:rgb(209, 9, 235);
+        }
+    </style>
+    <script>
+        function confirmOpen(link) {
+            if (confirm("Do you want to open the coding test link?")) {
+                window.open(link, '_blank');
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>All Employers</h1>
+    <a href="/add">Add New Employer</a>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Employee ID</th>
+            <th>Company Name</th>
+            <th>Contact Person</th>
+            <th>Email</th>
+            <th>Industry</th>
+            <th>Coding Test</th>
+            <th>Created At</th>
+        </tr>
+        
+        <tr>
+            <td>5</td>
+            <td>empoo3</td>
+            <td>microsoft</td>
+            <td>Rahul Sharma</td>
+            <td>rahul@123.com</td>
+            <td>  AI &amp; ML   </td>
+            <td>
+                
+                    <a href="#" onclick="confirmOpen('https://example.com/test/emp002')" class="link-btn">Open Link</a>
+                
+            </td>
+            <td>2025-04-24 20:04:52</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>EMP002 </td>
+            <td>InnovateX     </td>
+            <td>Anjali Mehta</td>
+            <td>anjali@innovatex.com</td>
+            <td>  AI &amp; ML   </td>
+            <td>
+                
+                    <a href="#" onclick="confirmOpen('https://example.com/test/emp002')" class="link-btn">Open Link</a>
+                
+            </td>
+            <td>2025-04-24 20:01:58</td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td>EMP002 </td>
+            <td>InnovateX     </td>
+            <td>Anjali Mehta</td>
+            <td>anjali@innovatex.com</td>
+            <td>  AI &amp; ML   </td>
+            <td>
+                
+                    <a href="#" onclick="confirmOpen('https://example.com/test/emp002 ')" class="link-btn">Open Link</a>
+                
+            </td>
+            <td>2025-04-24 19:54:18</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>EMP002</td>
+            <td>InnovateX</td>
+            <td>Anjali Mehta</td>
+            <td>anjali@innovatex.com</td>
+            <td>AI &amp; ML</td>
+            <td>
+                
+                    <a href="#" onclick="confirmOpen('https://example.com/test/emp002')" class="link-btn">Open Link</a>
+                
+            </td>
+            <td>2025-04-24 19:19:11</td>
+        </tr>
+        
+        <tr>
+            <td>2</td>
+            <td>EMP003</td>
+            <td>GreenTech Solutions</td>
+            <td>Mohit Raj</td>
+            <td>mohit@greentech.com</td>
+            <td>Environmental Tech</td>
+            <td>
+                
+                    <a href="#" onclick="confirmOpen('https://example.com/test/emp003')" class="link-btn">Open Link</a>
+                
+            </td>
+            <td>2025-04-24 19:19:11</td>
+        </tr>
+        
+    </table>
+
+</body>
+</html>

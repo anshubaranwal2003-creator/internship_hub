@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background:rgb(222, 129, 14);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .logout-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(13, 220, 82, 0.1);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .btn-logout {
+      background-color:rgb(145, 214, 35);
+      color: white;
+    }
+
+    .btn-cancel {
+      background-color:rgb(33, 133, 220);
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logout-container">
+    <h2>Are you sure you want to logout?</h2>
+    <button class="btn btn-logout" onclick="confirmLogout()">Yes, Logout</butto>
+        
+    <button class="btn btn-cancel" onclick="cancelLogout()">Cancel</button>
+  </div>
+  
+  <script>
+    function confirmLogout() {
+      // Redirect to Flask logout route
+      window.location.href = "/logout";
+    }
+
+    function cancelLogout() {
+      // Go back to previous page or dashboard
+      window.history.back();
+    }
+  </script>
+
+</body>
+</html>

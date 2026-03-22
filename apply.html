@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Internship</title>
+    <style>
+        /* CSS for page styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(8, 220, 185);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #4CAF50;
+            color: pink;
+            padding: 20px;
+        }
+
+        form {
+            background-color:  pink;
+            padding: 20px;
+            margin: 30px auto;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        input[type="text"], input[type="date"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Apply for Internship</h1>
+
+    <form action="/apply" method="POST" id="applyForm">
+        <label for="student_id">Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br>
+
+        <label for="internship_id">Internship ID:</label>
+        <input type="text" id="internship_id" name="internship_id" required><br>
+
+        <label for="date_applied">Date Applied:</label>
+        <input type="date" id="date_applied" name="date_applied" required><br>
+
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <script>
+        // JavaScript for handling form submission and validation
+        document.getElementById("applyForm").addEventListener("submit", function(event) {
+            const studentId = document.getElementById("student_id").value;
+            const internshipId = document.getElementById("internship_id").value;
+            const dateApplied = document.getElementById("date_applied").value;
+
+            // Check if all fields are filled
+            if (!studentId || !internshipId || !dateApplied) {
+                alert("Please fill out all the fields!");
+                event.preventDefault();
+            } else {
+                alert("Application submitted successfully!");
+            }
+        });
+    </script>
+
+</body>
+</html>

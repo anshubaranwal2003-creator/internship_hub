@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Internship</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: rgb(225, 3, 199);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 2px 5px rgba(8, 167, 219, 0.97);
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: rgb(225, 9, 120);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(23, 224, 173);
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post New Internship</h1>
+        <form method="post" onsubmit="return validateForm()">
+            <div class="error" id="error-msg">Please fill all fields correctly.</div>
+            <input type="text" name="title" id="title" placeholder="Title" required>
+            <input type="text" name="company" id="company" placeholder="Company" required>
+            <input type="text" name="location" id="location" placeholder="Location" required>
+            <textarea name="description" id="description" placeholder="Description" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const title = document.getElementById('

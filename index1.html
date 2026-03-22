@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternshipHub - Internship Management</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color:rgb(235, 14, 110);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(187, 228, 22, 0.92);
+        }
+
+        form input {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color:rgb(6, 233, 97);
+            color: pink;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color:rgb(15, 144, 242);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color:rgb(214, 0, 230);
+        }
+
+        tr:nth-child(even) {
+            background-color:rgb(128, 11, 236);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="internship2Form" method="POST" action="/add">
+    <div class="container">
+        <h1>InternshipHub - Internship Management</h1>
+
+        <!-- Form to add new internship -->
+        <form id="internshipForm">
+            <label for="employer_id">Employer ID:</label>
+            <input type="number" id="employer_id" required><br>
+            
+            <label for="company_name">Company Name:</label>
+            <input type="text" id="company_name" required><br>
+            
+            <label for="contact_person">Contact Person:</label>
+            <input type="text" id="contact_person" required><br>
+            
+            <label for="email">Contact Email:</label>
+            <input type="email" id="email" required><br>
+            
+            <label for="industry">Industry:</label>
+            <input type="text" id="industry" required><br>
+            
+            <button type="submit">Add Internship</button>
+        </form>
+
+        <h2>List of Internships</h2>
+        <table id="internshipTable">
+            <thead>
+                <tr>
+                    <th>Employer ID</th>
+                    <th>Company Name</th>
+                    <th>Contact Person</th>
+                    <th>Email</th>
+                    <th>Industry</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Internship data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // JavaScript to handle the form submission and display internships
+        const internshipForm = document.getElementById('internshipForm');
+        const internshipTable = document.getElementById('internshipTable').getElementsByTagName('tbody')[0];
+
+        // Array to hold internship data (simulating a database)
+        let internships = [];
+
+        // Function to add internship
+        internshipForm.addEventListener('submit', function (e) {
+            e.preventDefault();  // Prevent form submission
+
+            // Get form values
+            const employerId = document.getElementById('employer_id').value;
+            const companyName = document.getElementById('company_name').value;
+            const contactPerson = document.getElementById('contact_person').value;
+            const email = document.getElementById('email').value;
+            const industry = document.getElementById('industry').value;
+
+            // Create a new internship object
+            const newInternship = {
+                employer_id: employerId,
+                company_name: companyName,
+                contact_person: contactPerson,
+                email: email,
+                industry: industry
+            };
+
+            // Push new internship to the array
+            internships.push(newInternship);
+
+            // Update the table with the new internship
+            updateInternshipTable();
+
+            // Reset form fields
+            internshipForm.reset();
+        });
+
+        // Function to update the table with internship data
+        function updateInternshipTable() {
+            // Clear current table content
+            internshipTable.innerHTML = '';
+
+            // Add each internship to the table
+            internships.forEach(function (internship) {
+                const row = internshipTable.insertRow();
+
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                const cell3 = row.insertCell(2);
+                const cell4 = row.insertCell(3);
+                const cell5 = row.insertCell(4);
+
+                cell1.textContent = internship.employer_id;
+                cell2.textContent = internship.company_name;
+                cell3.textContent = internship.contact_person;
+                cell4.textContent = internship.email;
+                cell5.textContent = internship.industry;
+            });
+        }
+    </script>
+</body>
+</html>

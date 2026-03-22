@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- CSS Styles -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 50px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .user-info p {
+            margin: 10px 0;
+        }
+
+        .user-info a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .user-info a:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Dashboard Content -->
+        <h2>Welcome, {{ user[0] }}</h2>
+        
+        <div class="user-info">
+            <p>Email: {{ user[1] }}</p>
+            <p>Phone: {{ user[2] }}</p>
+            <p>University ID: {{ user[3] }}</p>
+            
+            <a href="/logout" id="logoutBtn">Logout</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 StudentHub. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Adding an event listener to the logout button to confirm logout
+        document.getElementById('logoutBtn').addEventListener('click', function(event) {
+            const confirmLogout = confirm('Are you sure you want to log out?');
+            if (!confirmLogout) {
+                event.preventDefault(); // Prevent the default logout action if user cancels
+            }
+        });
+    </script>
+    
+</body>
+</html>

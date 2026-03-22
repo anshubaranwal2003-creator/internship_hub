@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships</title>
+    <style>
+        /* CSS Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:rgb(244, 7, 244);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding-top: 20px;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(8, 222, 246, 0.98);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color:rgb(221, 190, 15);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color:rgb(218, 230, 224);
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .no-internships {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Internships</h1>
+
+    <!-- Table to display internship data -->
+    <table id="internship-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Internships will be populated by JavaScript -->
+        </tbody>
+    </table>
+
+    <div class="no-internships" id="no-internships" style="display: none;">
+        No internships available at the moment.
+    </div>
+
+    <script>
+        // Simulate internship data (In a real app, this will come from a backend)
+        const internships = [
+            { title: 'Software Developer Intern', company: 'Tech Co.', location: 'Remote', start_date: '2023-06-01', end_date: '2023-08-01' },
+            { title: 'Marketing Intern', company: 'Marketing Agency', location: 'New York', start_date: '2023-07-01', end_date: '2023-09-01' },
+            { title: 'Data Analyst Intern', company: 'Data Insights', location: 'San Francisco', start_date: '2023-08-01', end_date: '2023-10-01' }
+        ];
+
+        // DOM elements
+        const internshipTableBody = document.querySelector('#internship-table tbody');
+        const noInternshipsMessage = document.getElementById('no-internships');
+
+        // If there are internships, populate the table, else show the 'no internships' message
+        if (internships.length > 0) {
+            internships.forEach(internship => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${internship.title}</td>
+                    <td>${internship.company}</td>
+                    <td>${internship.location}</td>
+                    <td>${internship.start_date}</td>
+                    <td>${internship.end_date}</td>
+                `;
+                internshipTableBody.appendChild(row);
+            });
+        } else {
+            noInternshipsMessage.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

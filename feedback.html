@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Hub</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; padding: 0;
+            background:rgb(236, 23, 200);
+        }
+
+        header {
+            background: blue;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            background: cyan;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .reviews {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .review {
+            background: cyan;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solidrgb(215, 8, 201);
+            box-shadow: 0 0 5px #ccc;
+        }
+
+        footer {
+            text-align: center;
+            background: blue;
+            color: cyan;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feedback Hub</h1>
+        <p>We value your thoughts!</p>
+    </header>
+
+    <form method="POST" action="/">
+        <h2>Submit Your Feedback</h2>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <select name="rating" required>
+            <option value="">Rate Us</option>
+            <option value="5">⭐ 5 - Excellent</option>
+            <option value="4">⭐ 4 - Good</option>
+            <option value="3">⭐ 3 - Average</option>
+            <option value="2">⭐ 2 - Poor</option>
+            <option value="1">⭐ 1 - Terrible</option>
+        </select>
+        <textarea name="comment" rows="4" placeholder="Your feedback here..." required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+
+    <section class="reviews">
+        <h2 style="text-align:center;">Recent Feedback</h2>
+        
+        <div class="review">
+            <p><strong>Ananya Sharma</strong> rated: <strong>5/5</strong></p>
+            <p>Amazing platform! I found my internship within a week.     </p>
+            <small><em>2025-04-24 20:44:37</em></small>
+        </div>
+        
+        <div class="review">
+            <p><strong>Priya Desai</strong> rated: <strong>2/5</strong></p>
+            <p>Needs better filters and sorting for internships.</p>
+            <small><em>2025-04-24 20:41:15</em></small>
+        </div>
+        
+        <div class="review">
+            <p><strong>Vikram Singh</strong> rated: <strong>5/5</strong></p>
+            <p>Loved the UI and easy-to-use features! Highly recommended.</p>
+            <small><em>2025-04-24 20:41:15</em></small>
+        </div>
+        
+        <div class="review">
+            <p><strong>Sneha Roy</strong> rated: <strong>3/5</strong></p>
+            <p>Good layout and functionality, but a few bugs here and there.</p>
+            <small><em>2025-04-24 20:41:15</em></small>
+        </div>
+        
+        <div class="review">
+            <p><strong>Rohan Mehta</strong> rated: <strong>4/5</strong></p>
+            <p>Great experience. Just wish there were more opportunities for beginners.</p>
+            <small><em>2025-04-24 20:41:15</em></small>
+        </div>
+        
+        <div class="review">
+            <p><strong>Ananya Sharma</strong> rated: <strong>5/5</strong></p>
+            <p>Amazing platform! I found my internship within a week.</p>
+            <small><em>2025-04-24 20:41:15</em></small>
+        </div>
+        
+    </section>
+
+    <footer>
+        &copy; 2025 Feedback Hub. All rights reserved.
+    </footer>
+
+    <script>
+        console.log("Feedback page loaded!");
+    </script>
+</body>
+</html>

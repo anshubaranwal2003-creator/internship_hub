@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Portal</title>
+    <style>
+        /* CSS - Styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:rgb(123, 48, 214);
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-size: 18px;
+            margin: 20px;
+        }
+
+        a:hover {
+            color: #45a049;
+        }
+
+        .container {
+            margin: 30px;
+        }
+
+        .status-message {
+            color: green;
+        }
+
+        /* Adding responsive styling */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            a {
+                font-size: 16px;
+                margin: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Internship Portal</h1>
+
+    <div class="container">
+        <!-- Links to Apply and Check Status -->
+        <a href="/apply">Apply for Internship</a> |
+        <a href="/status">Check Application Status</a>
+    </div>
+
+    <script>
+        // JavaScript for some dynamic behavior (optional)
+        document.querySelector('a[href="/apply"]').addEventListener('click', function() {
+            alert('Redirecting to internship application page...');
+        });
+
+        document.querySelector('a[href="/status"]').addEventListener('click', function() {
+            alert('Redirecting to check application status...');
+        });
+    </script>
+</body>
+</html>
