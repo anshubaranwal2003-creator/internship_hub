@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Internship Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: rgb(209, 11, 249);
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        a {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #007bff;
+            box-shadow: 0 2px 4px rgba(52, 233, 16, 0.1);
+        }
+
+        li h3 {
+            margin: 0;
+        }
+
+        li p {
+            margin: 5px 0;
+        }
+
+        .highlight {
+            background-color: #d1ecf1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Internships</h1>
+    <a href="/post">Post Internship</a>
+    <ul id="internship-list">
+        
+        <li onclick="highlight(this)">
+            <h3>Python Web Intern at TechVerse Solutions</h3>
+            <p><strong>Location:</strong> Mumbai</p>
+            <p>Work on web applications using Python, Flask, and MySQL.</p>
+        </li>
+        
+        <li onclick="highlight(this)">
+            <h3>Full Stack Developer Intern at DevNest</h3>
+            <p><strong>Location:</strong> Bangalore</p>
+            <p>Build complete web solutions using HTML, CSS, JS, Flask, and MySQL.</p>
+        </li>
+        
+        <li onclick="highlight(this)">
+            <h3>Backend Intern at CodeCrush</h3>
+            <p><strong>Location:</strong> Delhi</p>
+            <p>Develop REST APIs and database models using Python and MySQL.</p>
+        </li>
+        
+        <li onclick="highlight(this)">
+            <h3>Python Web Intern   at TechVerse Solutions</h3>
+            <p><strong>Location:</strong> Mumbai   </p>
+            <p>Work on web applications using Python, Flask, and MySQL.    </p>
+        </li>
+        
+        <li onclick="highlight(this)">
+            <h3> Full Stack Developer Intern at TechVerse Solutions</h3>
+            <p><strong>Location:</strong> Mumbai   </p>
+            <p>Build complete web solutions using HTML, CSS, JS, Flask, and MySQL. |</p>
+        </li>
+        
+    </ul>
+
+    <script>
+        function highlight(element) {
+            document.querySelectorAll('li').forEach(li => li.classList.remove('highlight'));
+            element.classList.add('highlight');
+        }
+    </script>
+</body>
+</html>
+
+
